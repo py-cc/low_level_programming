@@ -2,6 +2,7 @@
 
 /**
 * int main(void) - entrey point
+* @puts - print line
 * return 0;
 **/
 
