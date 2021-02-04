@@ -28,8 +28,10 @@ int main(void)
 				putchar(j + '0');
 				putchar(x + '0');
 				if (!(j == 8 && x == 9 && i == 7))
+				{
 				putchar(',');
 				putchar(' ');
+				}
 				}
 			}
 		}
