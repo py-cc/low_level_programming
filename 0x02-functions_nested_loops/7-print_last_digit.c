@@ -10,7 +10,7 @@
 int print_last_digit(int a)
 {
 
-	a = % 10;
+	a = a % 10;
 
 	if (a < 0)
 	{
@@ -19,7 +19,7 @@ int print_last_digit(int a)
 	}
 	else
 	{
-		_putchar(num + '0');
+		_putchar(a + '0');
 	}
 
 	return (a);
