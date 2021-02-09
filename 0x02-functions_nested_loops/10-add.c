@@ -2,6 +2,8 @@
 
 /**
 * add - adds two integers and return result
+* @n: firts num to add
+* @n2: second num to add
 *
 * Return: Result with add
 */
