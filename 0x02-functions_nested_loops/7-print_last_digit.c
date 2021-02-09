@@ -7,21 +7,19 @@
 * Return: Always 0
 */
 
-int print_last_digit(int a)
+int print_last_digit(int n)
 {
-	int num;
+	int a = n % 10;
 
-	num = a % 10;
-
-	if (a <= 0)
+	if (a > 0)
 	{
-		num = num * -1;
-		_putchar(num + '0');
+		_putchar(a + '0');
 	}
 	else
 	{
-		_putchar(num + '0');
+		a = a * -1;
+		_putchar(a + '0');
 	}
 
-	return (num);
+	return (a);
 }
