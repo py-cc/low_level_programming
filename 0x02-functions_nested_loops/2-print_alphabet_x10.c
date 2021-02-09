@@ -7,26 +7,15 @@ void print_alphabet_x10(void)
 {
 
 	int num;
+	char a;
 
 	for (num = 0; num <= 10; num++)
 	{
-		print_alphabet();
+		for (a = 'a'; a <= 'z'; a++)
+		{
+			_putchar(a);
+		}
+		_putchar('\n');
 	}
 
-}
-
-/**
-* print_alphabet - print alphabet in lowercase
-*
-*/
-
-void print_alphabet(void)
-{
-	char a;
-
-	for (a = 'a'; a <= 'z'; a++)
-	{
-		_putchar(a);
-	}
-	_putchar('\n');
 }
