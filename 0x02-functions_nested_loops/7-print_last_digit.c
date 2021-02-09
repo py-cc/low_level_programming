@@ -10,20 +10,17 @@
 int print_last_digit(int a)
 {
 
-	int num;
+	a = % 10;
 
-	num = a % 10;
-
-	if (num < 0)
+	if (a < 0)
 	{
 		a = a * -1;
-		num = a % 10;
-		putchar(num + '0');
+		putchar(a + '0');
 	}
 	else
 	{
 		putchar(num + '0');
 	}
 
-	return (num);
+	return (a);
 }
