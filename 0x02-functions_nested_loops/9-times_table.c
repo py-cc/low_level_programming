@@ -19,7 +19,7 @@ for (i = 0; i <= 9; i++)
 	{
 	_putchar(0 + '0');
 	}
-	else if (mult / 10 == 0 && j != 0)
+	else if (mult <= 9)
 	{
 		_putchar(' ');
 		_putchar(mult % 10 + '0');
