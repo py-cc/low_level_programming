@@ -3,9 +3,10 @@
 /**
 * main - Entry point
 *
+* Description: Prints a string followed by a new line
+*
 * Return: Always (0)
-**/
-
+*/
 int main(void)
 {
 
@@ -21,4 +22,3 @@ int main(void)
 	_putchar('\n');
 	return (0);
 }
-
