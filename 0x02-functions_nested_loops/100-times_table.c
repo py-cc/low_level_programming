@@ -46,7 +46,7 @@ _putchar(',');
 _putchar(' ');
 }
 _putchar(mult / 100 + '0');
-mult = mult%100;
+mult = mult % 100;
 _putchar(mult / 10 + '0');
 _putchar(mult % 10 + '0');
 }
