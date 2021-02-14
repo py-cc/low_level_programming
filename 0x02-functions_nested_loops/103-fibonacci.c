@@ -6,26 +6,18 @@
 */
 int main(void)
 {
-	long int sum = 1, num = 0;
-	long int temp;
-	int i = 1;
+	int sum = 0, num = 0, num1 = 0, num2 = 1;
 
 	while (num < 4000000)
 	{
-			temp = sum;
-			sum = sum + num;
-			if (sum % 2 == 0)
-			{
-				printf("%ld", sum);
-				if (!(sum > 3000000))
-				{
-					printf(",");
-					printf(" ");
-				}
-			}
-			num = temp;
-			i++;
+		num = num1 + num2;
+		num1 = num2;
+		num2 = num;
+		if (num % 2 == 0)
+		{
+			sum = num + sum;
+		}
 	}
-	printf("\n");
+	printf("%d\n", sum);
 	return (0);
 }
