@@ -6,15 +6,15 @@
 */
 int main(void)
 {
-	long long int sum = 0, num = 1;
-	long long int  temp;
+	long int sum = 0, num = 1;
+	long int  temp;
 	int  i = 1;
 
 	while (i < 50)
 	{
 		temp = sum;
 		sum = sum + num;
-		printf("%lld", sum);
+		printf("%ld", sum);
 		if (i != 49)
 		{
 			printf(",");
