@@ -11,7 +11,7 @@ int main(void)
 
 	for (prime = 2; n > prime; prime++)
 	{
-		while(n % prime == 0)
+		while (n % prime == 0)
 		{
 			n = n / prime;
 		}
