@@ -12,38 +12,38 @@ if (n > 0)
 {
 if (n > 100 && n < 1000)
 {
-putchar(n / 100 + '0');
+_putchar(n / 100 + '0');
 num = n / 10;
-putchar(num % 10 + '0');
-putchar(n % 10 + '0');
+_putchar(num % 10 + '0');
+_putchar(n % 10 + '0');
 }
 else if (n > 1000)
 {
-putchar(n / 1000 + '0');
+_putchar(n / 1000 + '0');
 num = n / 100;
-putchar(num % 10 + '0');
+_putchar(num % 10 + '0');
 num = n % 100;
-putchar(num / 10 + '0');
-putchar(num % 10 + '0');
+_putchar(num / 10 + '0');
+_putchar(num % 10 + '0');
 }
 else
 {
-putchar(n / 10 + '0');
+_putchar(n / 10 + '0');
 num = n % 10;
-putchar(num + '0');
+_putchar(num + '0');
 }
 }
 else if (n < 0)
 {
 n = -n;
-putchar('-');
+_putchar('-');
 num = n / 10;
-putchar(num + '0');
+_putchar(num + '0');
 num = n % 10;
-putchar(num + '0');
+_putchar(num + '0');
 }
 else if (n == 0)
 {
-putchar(n + '0');
+_putchar(n + '0');
 }
 }
