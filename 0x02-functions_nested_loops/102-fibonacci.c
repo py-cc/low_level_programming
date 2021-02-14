@@ -10,17 +10,17 @@ int main(void)
 	long int  temp;
 	int  i = 1;
 
-	while (i < 50)
+	while (i <= 50)
 	{
 		temp = sum;
 		sum = sum + num;
 		printf("%ld", sum);
-		if (i != 49)
+		if (i != 50)
 		{
 			printf(",");
 			printf(" ");
 		}
-		else if (i == 49)
+		else if (i == 50)
 		{
 			printf("\n");
 		}
