@@ -10,15 +10,8 @@ int main(void)
 	long int temp;
 	int i = 1;
 
-	while (i <= 50)
+	while (num <= 4000000)
 	{
-		if (sum >= 4000000)
-		{
-			printf("\n");
-			break;
-		}
-		else
-		{
 			temp = sum;
 			sum = sum + num;
 			if (sum % 2 == 0)
@@ -32,9 +25,7 @@ int main(void)
 			}
 			num = temp;
 			i++;
-		}
-
 	}
-
+	printf("\n");
 	return (0);
 }
