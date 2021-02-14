@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	long int sum = 0, num = 1;
+	long int sum = 1, num = 0;
 	long int  temp;
 	int  i = 1;
 
