@@ -15,6 +15,8 @@ int _atoi(char *s)
 			signo++;
 		else if (s[len] >= '0' && s[len] <= '9')
 			result = result * 10 + s[len] - 48;
+		else if (result > 0)
+			break;
 		else if (*s == '\0')
 			return (0);
 	}
