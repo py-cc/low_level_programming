@@ -1,9 +1,11 @@
 #include "holberton.h"
 /**
-* *_strncat - function tha concatenates two strings
+* _strncat - concatenates two strings
 * @dest: string with declared buffer to concatenate
 * @src: string to concatenate
 * @n: amount of bytes to concatenate
+*
+* Return: pointer to the resulting string dest
 */
 char *_strncat(char *dest, char *src, int n)
 {
