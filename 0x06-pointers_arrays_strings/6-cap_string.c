@@ -34,16 +34,6 @@ char *cap_string(char *s)
 		i++;
 		s[i] = s[i] - 32;
 	}
-	else if (s[i] == '-')
-	{
-		i++;
-		s[i] = s[i] - 32;
-	}
-	else if (s[i] >= '0' && s[i] <= '9' && s[i + 1] >= 'a' && s[i + 1] <= 'z')
-	{
-		i++;
-		s[i] = s[i] - 32;
-	}
 	}
 	return (s);
 }
