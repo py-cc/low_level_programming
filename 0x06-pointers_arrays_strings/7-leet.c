@@ -5,23 +5,23 @@
 *
 * Return: pointer to string
 */
-char *leet(char *x)
+char *leet(char *s)
 {
 	int y = 0;
-	char *end = x;
-	char *letters = "aAeEoOtTlL";
-	char *numbers = "4433007711";
+	char *end = s;
+	char *lett = "aAeEoOtTlL";
+	char *numb = "4433007711";
 
-	while (*x)
+	while (*s)
 	{
-		for (y = 0; letters[y]; y++)
+		for (y = 0; lett[y]; y++)
 		{
-			if (*x == letters[y])
+			if (*s == lett[y])
 			{
-				*x = numbers[y];
+				*s = numb[y];
 			}
 		}
-		x++;
+		s++;
 	}
 	return (end);
 }
