@@ -13,7 +13,7 @@ char *cap_string(char *s)
 	{
 	if (i == 0)
 	{
-		if (s[i] >= 65 && s[i] <= 90)
+		if (s[i] >= 96 && s[i] <= 123)
 		{
 			s[i] = s[i] + 32;
 		}
