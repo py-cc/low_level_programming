@@ -5,20 +5,20 @@
 *
 * Return: pointer to char
 */
-char *rot13(char *a)
+char *rot13(char *s)
 {
 	int i = 0;
 	int j;
 	char let[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char cod[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	while (a[i] != '\0')
+	while (s[i] != '\0')
 	{
 		for (j = 0; let[j] != '\0'; j++)
 		{
-			if (a[i] == let[j])
+			if (s[i] == let[j])
 			{
-				a[i] = cod[j];
+				s[i] = cod[j];
 				break;
 			}
 		}
