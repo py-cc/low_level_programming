@@ -1,20 +1,21 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
-* _memset - fills memory with a constant byte
-* @s: pointer to array
-* @b: constant char
-* @n: n bytes the memory
-* Return: pointer to the memory area
-*/
-char *_menset(char *s, char b, unsigned int n)
+ * _memset -  fills memory with a constant byte
+ * @s: array where the data is stored
+ * @b: byte to print
+ * @n: n bytes that has to be printed
+ *
+ * Return: a pointer to the memory area s
+ */
+
+char *_memset(char *s, char b, unsigned int n)
 {
+	unsigned int a;
 
-	unsigned int j;
-
-	for (j = 0; j < n; j++)
+	for (a = 0; a < n; a++)
 	{
-		s[j] = b;
+		s[a] = b;
 	}
 	return (s);
 }
