@@ -25,7 +25,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (j >= x)
 		{
-			if(needle[j] != '\0')
+			if (needle[j] != '\0')
 			{
 				j = j - 1;
 			}
