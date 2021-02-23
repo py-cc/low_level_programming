@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * print_diagsums - add numbers of the diagonal
  * @a: string
@@ -14,6 +15,5 @@ void print_diagsums(int *a, int size)
 		sum = sum + a[(size + 1) * i];
 		sum1 = sum1 + a[(size - 1) * (i + 1)];
 	}
-
 	printf("%d, %d\n", sum, sum1);
 }
