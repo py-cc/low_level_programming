@@ -29,7 +29,7 @@ int _atoi(char *s)
 * @argc: size of argv
 * @argv: size of command arguments
 *
-* Return: 0 Success
+* Return: 0 Success of 1 If the program does not receive two arguments
 */
 int main(int argc, char *argv[])
 {
