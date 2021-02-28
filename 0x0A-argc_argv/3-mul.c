@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
 			mult = _atoi(argv[1]) * _atoi(argv[2]);
 		}
 		printf("%d\n", mult);
+		return (0);
 
 	}
 	else
@@ -50,5 +51,4 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	return (0);
 }
