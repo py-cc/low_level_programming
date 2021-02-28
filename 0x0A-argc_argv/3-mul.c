@@ -34,21 +34,18 @@ int _atoi(char *s)
 int main(int argc, char *argv[])
 {
 
-	if (argc > 1)
-	{
-		int i, mult = 0;
+	int mult = 0;
 
-		for (i = 1; i < argc; i++)
-		{
-			mult = _atoi(argv[1]) * _atoi(argv[2]);
-		}
-		printf("%d\n", mult);
-		return (0);
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (1);
 
 	}
 	else
 	{
-		printf("Error\n");
-		return (1);
+		mult = _atoi(argv[1]) * _atoi(argv[2]);
+		printf("%d\n", mult);
+		return (0);
 	}
 }
