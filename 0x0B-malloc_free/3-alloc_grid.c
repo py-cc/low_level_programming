@@ -13,7 +13,7 @@
 
 int **alloc_grid(int width, int height)
 {
-	int i, j;
+	int i, j, x;
 	int **matrix;
 
 	if (width <= 0 || height <= 0)
@@ -28,7 +28,14 @@ int **alloc_grid(int width, int height)
 	{
 		*(matrix + i) = malloc(sizeof(int) * width); /* colunmas */
 		if (*(matrix + i) == NULL)
+		{
+			for (x = 0; x < i; x++)
+			{
+				free(matrix[x]);
+			}
+			free(matrix);
 			return (NULL);
+		}
 
 		for (j = 0; j < width; j++) /* desde 0 hasta el ancho */
 		{
