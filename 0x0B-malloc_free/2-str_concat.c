@@ -1,49 +1,40 @@
-#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "holberton.h"
+
 /**
-* str_concat - concatenates two strings
-* @s1: firts string
-* @s2: second string
-*
-* Return: pointer to a new memory space storing two strings
-* if it passed NULL return string empty or NULL in case malloc failed
-*/
+ * str_concat - concatenates two strings.
+ * @s1: string one.
+ * @s2: string to concatenate from.
+ *
+ * Return: a pointer to the concatenated string or null on failure.
+ */
+
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	unsigned int i, j, k, y;
+	unsigned int x, y, i = 0, j = 0;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 != NULL)
 	{
-		return ("");
+		while (s1[i])
+			i++;
 	}
-
-	for (i = 0; s1[i] != '\0'; i++)
+	if (s2 != NULL)
 	{
+		while (s2[j])
+			j++;
 	}
-
-	for (k = 0; s2[k] != '\0'; k++)
+	ptr = malloc((sizeof(char) * (i + j)) + 1);
+	if (ptr == NULL)
+		return (NULL);
+	for (x = 0; x < i; x++)
+		ptr[x] = s1[x];
+	for (y = 0; y < j; y++)
 	{
+		ptr[x] = s2[y];
+		x++;
 	}
-
-	ptr = malloc((sizeof(char) * (i + k)) + 1);
-
-		if (ptr == NULL)
-		{
-			return (NULL);
-		}
-
-		for (j = 0; s1[j] != '\0'; j++)
-		{
-			ptr[j] = s1[j];
-		}
-
-		for (y = 0; s2[y] != '\0'; y++)
-		{
-			ptr[i + y] = s2[y];
-		}
-
-		ptr[i + k] = '\0';
+	ptr[x] = '\0';
 	return (ptr);
 }
