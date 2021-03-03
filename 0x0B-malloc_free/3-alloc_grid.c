@@ -16,21 +16,17 @@ int **alloc_grid(int width, int height)
 	int i, j;
 	int **matrix;
 
-/* Notes: int **matrix; height == altura, width == ancho */
-/* 96 espacios de memoria de 4bytes */
-/* matrix = malloc(sizeof(int) width * height); */
-/* 6x4 24 cajas x fila = 96 cajas. 1 fila == 6x4bytes */
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	matrix = malloc(height * sizeof(*int)); /* filas */
+	matrix = malloc(sizeof(int *) * height); /* filas */
 
 	if (matrix == NULL)
 		return (NULL);
 
 	for (i = 0; i < height; i++)
 	{
-		*(matrix + i) = malloc(width * sizeof(int)); /* colunmas */
+		*(matrix + i) = malloc(sizeof(int) * width); /* colunmas */
 		if (*(matrix + i) == NULL)
 			return (NULL);
 
@@ -39,10 +35,5 @@ int **alloc_grid(int width, int height)
 			*(*(matrix + i) + j) = 0; /* inicializarlo en 0 <<< */
 		}
 	}
-
-	for (x = 0; x < i; x++)
-		free(matrix[x]);
-	free(matrix);
-
 	return (matrix);
 }
