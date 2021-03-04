@@ -28,28 +28,27 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else
 		s2 = "";
 
-	if (n < j)
-	{
-		buffer = malloc(n + i + 1 * sizeof(char));
-		if (buffer == NULL)
-			return (NULL);
-	}
-	else if (n >= j)
+	if (n >= j)
 	{
 		buffer = malloc(i + j + 1 * sizeof(char));
 		if (buffer == NULL)
 			return (NULL);
+		for (str = 0; str < i; str++)
+			buffer[str] = s1[str];
+		for (str2 = 0; str2 <= j; str2++)
+			buffer[str + str2] = s2[str2];
+		return(buffer);
 	}
+
+	buffer = malloc(n + i + 1 * sizeof(char));
+	if (buffer == NULL)
+		return (NULL);
 
 	for (str = 0; str < i; str++)
-	{
 		buffer[str] = s1[str];
-	}
 	for (str2 = 0; str2 < n; str2++)
-	{
 		buffer[str + str2] = s2[str2];
-	}
-		buffer[str2 + str] = '\0';
 
+	buffer[str2 + str] = '\0';
 	return (buffer);
 }
