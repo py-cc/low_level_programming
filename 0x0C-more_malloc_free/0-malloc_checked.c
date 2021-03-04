@@ -2,11 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-* malloc_checked -
+* malloc_checked - create buffer
 * @b: size of buffer
 *
 *
-* Return:
+* Return: void pointer to the allocates memory if buffer failed return exit()
+Â* with a status value of 98
 */
 void *malloc_checked(unsigned int b)
 {
