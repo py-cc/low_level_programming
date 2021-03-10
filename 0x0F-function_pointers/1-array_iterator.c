@@ -1,5 +1,4 @@
 #include "function_pointers.h"
-#include <stdio.h>
 /**
 * array_iterador - executes array with pointer to function with print
 * @array: pointer to array
@@ -10,7 +9,7 @@
 */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; i < size; i++)
 	{
