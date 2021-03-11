@@ -12,7 +12,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 
 	if (array != NULL && size != 0 && action != NULL)
 	{
-		unsigned int i;
+		unsigned int i; /* or size_t i <<< create type data unsigned int*/
 
 		for (i = 0; i < size; i++)
 		{
