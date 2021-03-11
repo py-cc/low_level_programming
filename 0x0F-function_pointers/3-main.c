@@ -10,8 +10,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int num1, num2, calc;
-	char *sign;
+	int calc;
 
 	if (argc != 4)
 	{
@@ -29,11 +28,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-		num1 = atoi(argv[1]);
-		sign = argv[2];
-		num2 = atoi(argv[3]);
-
-		calc = get_op_func(sign)(num1, num2);
+		calc = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
 		printf("%d\n", calc);
 
 		return (0);
