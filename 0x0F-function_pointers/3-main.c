@@ -10,7 +10,6 @@
 */
 int main(int argc, char *argv[])
 {
-	int calc;
 
 	if (argc != 4)
 	{
