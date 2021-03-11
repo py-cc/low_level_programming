@@ -1,4 +1,7 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
 * get_op_func - that selects the correct function to perform
 * the operation asked by the user.
@@ -6,6 +9,7 @@
 *
 * Return: result if success or NULL is failed
 */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -21,9 +25,9 @@ int (*get_op_func(char *s))(int, int)
 
 	i = 0;
 
-	while (i < 5)
+	while (ops[i].op)
 	{
-		if (ops[i].op[0] == *s)
+		if (*ops[i].op == *s)
 		{
 			return (ops[i].f);
 		}
