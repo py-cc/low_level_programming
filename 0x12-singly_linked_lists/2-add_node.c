@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-* len - longitud of string
+* len_string - longitud of string
 * @str: string
 *
 * Return: longitud of string
@@ -26,11 +26,16 @@ list_t *add_node(list_t **head, const char *str)
 {
 	int n;
 	list_t *new_node;
+
 	n = len_string(str);
 
 	if (*head == NULL) /* *desreferenciacion, valor de la direccion */
 	{
 		new_node = malloc(sizeof(list_t));
+		if (new_node == NULL)
+		{
+			return (NULL);
+		}
 		new_node->str = strdup(str);
 		new_node->len = n;
 		new_node->next = NULL;
@@ -38,6 +43,10 @@ list_t *add_node(list_t **head, const char *str)
 	else
 	{
 		new_node = malloc(sizeof(list_t));
+		if (new_node == NULL)
+		{
+			return (NULL);
+		}
 		new_node->str = strdup(str);
 		new_node->len = n;
 		new_node->next = *head;
