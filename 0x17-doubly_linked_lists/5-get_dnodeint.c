@@ -20,15 +20,16 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	if (new_node == NULL)
 		return (NULL);
 
-
-	while (i < index)
+	if (head)
 	{
-		tmp = tmp->next;
-		i++;
+		while (i < index)
+		{
+			tmp = tmp->next;
+			i++;
+		}
+		new_node->n = tmp->n;
+		new_node->prev = NULL;
+		new_node->next = NULL;
 	}
-	new_node->n = tmp->n;
-	new_node->prev = NULL;
-	new_node->next = NULL;
-
 	return (new_node);
 }
