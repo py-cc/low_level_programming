@@ -1,3 +1,5 @@
+#ifndef _LISTS_H
+#define _LISTS_H
 /**
  * struct dlistint_s - doubly linked list
  * @n: integer
@@ -21,3 +23,5 @@ void free_dlistint(dlistint_t *head);
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 int sum_dlistint(dlistint_t *head);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
+
+#endif /* LIST_T */
